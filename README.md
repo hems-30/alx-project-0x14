@@ -39,26 +39,23 @@ bash
   ],
   "runtime": 139
 }
-Authentication
+
+
+## Authentication
 The API requires an API key for authentication. You must include the API key either as a query parameter named api_key in every request or in the headers as specified in the documentation. Your API key should be kept private and not exposed publicly.
 
-Error Handling
+## Error Handling
 Common error responses include:
 
-401 Unauthorized — The API key is missing or invalid.
-
-404 Not Found — The requested resource does not exist.
-
-429 Too Many Requests — You have exceeded the API rate limits.
+- 401 Unauthorized — The API key is missing or invalid.
+- 404 Not Found — The requested resource does not exist.
+- 429 Too Many Requests — You have exceeded the API rate limits.
 
 Your application should check for these status codes and handle them gracefully, such as by showing error messages to the user or implementing retries after some delay.
 
-Usage Limits and Best Practices
-The API enforces rate limits (for example, 40 requests every 10 seconds).
-
-Cache frequent or repeated requests locally to improve performance and reduce API usage.
-
-Use pagination and filtering to limit the amount of data requested.
-
-Secure your API key; avoid committing it to public repositories or exposing it on the frontend.
+## Usage Limits and Best Practices
+- The API enforces rate limits (for example, 40 requests every 10 seconds).
+- Cache frequent or repeated requests locally to improve performance and reduce API usage.
+- Use pagination and filtering to limit the amount of data requested.
+- Secure your API key; avoid committing it to public repositories or exposing it on the frontend.
 
